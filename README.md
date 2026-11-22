@@ -290,14 +290,4 @@ Windows-приложение на **WPF / .NET 8** для контроля и н
 
 ---
 
-## Технологии
-
-- **Микроконтроллер**: STM32F103C8T6, CMSIS/HAL, CMake + Ninja,
-  `arm-none-eabi-gcc`, Release.
-- **Прошивка**: C, USB CDC (Device FS), I2C, SPI, ADC + DMA, IWDG.
-- **Приложение**: C# / WPF, .NET 8, `System.IO.Ports`, `System.Management`.
-- **Публикация приложения**: self-contained single-file (`PublishSingleFile`).
-
----
-
 [R9OFG.RU](https://r9ofg.ru)
