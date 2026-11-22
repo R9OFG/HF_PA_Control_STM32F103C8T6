@@ -1,0 +1,45 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 22,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "release",
+      "displayName": "Release",
+      "description": "Релизная сборка (-Os, символы для отладки)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/arm-none-eabi.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "usbtest",
+      "displayName": "USB test",
+      "description": "Только USB CDC: диагностическая прошивка (usb_cdc_test.hex)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/usbtest",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/arm-none-eabi.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "PA_USB_ONLY_TEST": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "release",
+      "configurePreset": "release"
+    },
+    {
+      "name": "usbtest",
+      "configurePreset": "usbtest"
+    }
+  ]
+}

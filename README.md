@@ -5,7 +5,15 @@
 графический дисплей и USB-интерфейс для управления с ПК.
 
 В репозитории — описание проекта, скриншоты, назначение выводов, пределы
-измерений и готовое приложение одним exe.
+измерений, исходники и готовая прошивка, а также приложение одним exe
+в zip-архиве.
+
+## Структура репозитория
+
+- [`Firmware/Source/`](Firmware/Source/) — исходники прошивки: `Core`, `Drivers`, `cmake`, CMake-файлы и линкер-скрипт.
+- [`Firmware/Release/`](Firmware/Release/) — готовые `bin` и `hex`.
+- [`App/HPC-R9OFG.zip`](App/HPC-R9OFG.zip) — приложение одним self-contained exe в архиве.
+- [`Pics/`](Pics/) — скриншоты дисплея и приложения.
 
 ---
 
@@ -254,11 +262,19 @@ Windows-приложение на **WPF / .NET 8** для контроля и н
 
 ---
 
+## Прошивка
+
+- [Исходники прошивки](Firmware/Source/) — `Core`, `Drivers`, `cmake`, `CMakeLists.txt`, `CMakePresets.json`, `STM32F103C8TX_FLASH.ld`.
+- [Готовая прошивка, HEX](Firmware/Release/hf_pa_controller_stm32f103c8t6_r9ofg_2.0.hex)
+- [Готовая прошивка, BIN](Firmware/Release/hf_pa_controller_stm32f103c8t6_r9ofg_2.0.bin)
+
+---
+
 ## Скачать и запустить
 
-Готовое приложение — **один exe**, без установки:
+Готовое приложение — **один exe в zip-архиве**, без установки:
 
-**[Скачать HPC-R9OFG.exe](App/HPC-R9OFG.exe)**
+**[Скачать HPC-R9OFG.zip](App/HPC-R9OFG.zip)**
 
 - Windows 10/11, x64;
 - .NET устанавливать не нужно (self-contained);
