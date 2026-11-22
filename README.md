@@ -11,7 +11,7 @@
 ## Структура репозитория
 
 - [`Firmware/Source/`](Firmware/Source/) — исходники прошивки: `Core`, `Drivers`.
-- [`Firmware/Release/`](Firmware/Release/) — готовые `bin` и `hex`.
+- [`Firmware/Release/`](Firmware/Release/) — текущие `bin` и `hex`.
 - [`App/HPC-R9OFG.zip`](App/HPC-R9OFG.zip) — приложение одним self-contained exe в архиве.
 - [`Pics/`](Pics/) — скриншоты дисплея и приложения.
 
