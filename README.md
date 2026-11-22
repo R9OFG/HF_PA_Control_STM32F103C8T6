@@ -10,7 +10,7 @@
 
 ## Структура репозитория
 
-- [`Firmware/Source/`](Firmware/Source/) — исходники прошивки: `Core`, `Drivers`, `cmake`, CMake-файлы и линкер-скрипт.
+- [`Firmware/Source/`](Firmware/Source/) — исходники прошивки: `Core`, `Drivers`.
 - [`Firmware/Release/`](Firmware/Release/) — готовые `bin` и `hex`.
 - [`App/HPC-R9OFG.zip`](App/HPC-R9OFG.zip) — приложение одним self-contained exe в архиве.
 - [`Pics/`](Pics/) — скриншоты дисплея и приложения.
@@ -269,7 +269,7 @@ Windows-приложение на **WPF / .NET 8** для контроля и н
 
 ## Прошивка
 
-- [Исходники прошивки](Firmware/Source/) — `Core`, `Drivers`, `cmake`, `CMakeLists.txt`, `CMakePresets.json`, `STM32F103C8TX_FLASH.ld`.
+- [Исходники прошивки](Firmware/Source/) — `Core`, `Drivers`.
 - [Готовая прошивка, HEX](Firmware/Release/hf_pa_controller_stm32f103c8t6_r9ofg_2.0.hex)
 - [Готовая прошивка, BIN](Firmware/Release/hf_pa_controller_stm32f103c8t6_r9ofg_2.0.bin)
 
