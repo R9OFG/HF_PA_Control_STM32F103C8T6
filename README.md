@@ -277,4 +277,4 @@ Windows-приложение на **WPF / .NET 8** для контроля и н
 
 ---
 
-Автор: [R9OFG.RU](https://r9ofg.ru)
+[R9OFG.RU](https://r9ofg.ru)
