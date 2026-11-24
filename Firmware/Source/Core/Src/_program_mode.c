@@ -1404,7 +1404,7 @@ uint8_t PROTECTION_recover(void)
 
 			//выводим сообщение
 			LCD_Clean_Buffer_Frame();
-			LCD_Output_String_Center(25, "ВОЗВРАТ\n", 0, ChUnInvers);
+			LCD_Output_String(30, 25, "ВОЗВРАТ\n", 0, ChUnInvers);
 			LCD_Update();
 
 			HAL_Delay(500);
@@ -3301,9 +3301,9 @@ void Splash()
 	//сброс IWDG
 	HAL_IWDG_Refresh(&hiwdg);
 	//вывод заставки
-	LCD_Output_String_Center(0, _PROGRAM_DEF, 0, ChUnInvers);
-	LCD_Output_String_Center(25, _RELEASE_DEF, 0, ChUnInvers);
-	LCD_Output_String_Center(53, _COPYRIGHT_DEF, 0, ChUnInvers);
+	LCD_Output_String(1, 0, _PROGRAM_DEF, 0, ChUnInvers);
+	LCD_Output_String(36, 25, _RELEASE_DEF, 0, ChUnInvers);
+	LCD_Output_String(40, 53, _COPYRIGHT_DEF, 0, ChUnInvers);
 	LCD_Update();
 	//длительность заставки
 	PA_Protocol_Poll();
