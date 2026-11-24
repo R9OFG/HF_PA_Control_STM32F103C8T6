@@ -380,7 +380,7 @@ int main(void)
 
   	wwdg_flag = 1;
 
-  	LCD_Output_String(45, 25, "АВАРИЯ\n", 0, ChUnInvers);
+  	LCD_Output_String_Center(25, "АВАРИЯ\n", 0, ChUnInvers);
   	LCD_Update();
   	HAL_Delay(1000);
   }
@@ -390,7 +390,7 @@ int main(void)
 
   if(wwdg_flag == 0)
   {
-	  LCD_Output_String(25, 25, "ДИАГНОСТИКА\n", 0, ChUnInvers);
+	  LCD_Output_String_Center(25, "ДИАГНОСТИКА\n", 0, ChUnInvers);
 	  LCD_Update();
 	  HAL_Delay(1000);
   }
@@ -412,16 +412,16 @@ int main(void)
   while((flag_ina226 != 1)||(flag_lm75a != 1))
   {
 	LCD_Clean_Buffer_Frame();
-	LCD_Output_String(15, 20, "ОШИБКА ДАТЧИКА\n", 0, ChUnInvers);
+	LCD_Output_String_Center(20, "ОШИБКА ДАТЧИКА\n", 0, ChUnInvers);
 
 	if(flag_ina226 != 1)
 	{
-		LCD_Output_String(45, (flag_lm75a != 1) ? 30 : 34, "INA226\n", 0, ChUnInvers);
+		LCD_Output_String_Center((flag_lm75a != 1) ? 30 : 34, "INA226\n", 0, ChUnInvers);
 	}
 
 	if(flag_lm75a != 1)
 	{
-		LCD_Output_String(48, (flag_ina226 != 1) ? 42 : 34, "LM75A\n", 0, ChUnInvers);
+		LCD_Output_String_Center((flag_ina226 != 1) ? 42 : 34, "LM75A\n", 0, ChUnInvers);
 	}
 
 	LCD_Update();
@@ -468,8 +468,8 @@ int main(void)
 
 	//выводим предупреждение
 	LCD_Clean_Buffer_Frame();
-	LCD_Output_String(30, 20, "НАПРЯЖЕНИЕ\n", 0, ChUnInvers);
-	LCD_Output_String(32, 34, "НЕ В НОРМЕ\n", 0, ChUnInvers);
+	LCD_Output_String_Center(20, "НАПРЯЖЕНИЕ\n", 0, ChUnInvers);
+	LCD_Output_String_Center(34, "НЕ В НОРМЕ\n", 0, ChUnInvers);
 	LCD_Update();
 
 	//ждем перед следующей попыткой

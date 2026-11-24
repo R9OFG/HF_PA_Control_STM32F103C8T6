@@ -1247,51 +1247,51 @@ void PROTECTION_fault(PA_FAULT code)
 
 	//выводим причину аварии
 	LCD_Clean_Buffer_Frame();
-	LCD_Output_String_Center(12, "АВАРИЯ\n", 0, ChUnInvers);
+	LCD_Output_String_Center(7, "АВАРИЯ\n", 0, ChUnInvers);
 
 	switch(code)
 	{
 		case PA_FAULT_VOLTAGE:
-			LCD_Output_String_Center(30, "НАПРЯЖЕНИЕ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "НАПРЯЖЕНИЕ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_UVOLT:
-			LCD_Output_String_Center(30, "U НИЗКОЕ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "U НИЗКОЕ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_OVOLT:
-			LCD_Output_String_Center(30, "U ВЫСОКОЕ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "U ВЫСОКОЕ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_CURRENT:
-			LCD_Output_String_Center(30, "ТОК ПОТРЕБЛЕНИЯ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "ТОК ПОТРЕБЛЕНИЯ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_SWR:
-			LCD_Output_String_Center(30, "КСВ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "КСВ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_TEMP:
-			LCD_Output_String_Center(30, "ПЕРЕГРЕВ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "ПЕРЕГРЕВ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_SENSOR:
-			LCD_Output_String_Center(30, "ДАТЧИКИ I2C\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "ДАТЧИКИ I2C\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_INA226:
-			LCD_Output_String_Center(30, "ДАТЧИК INA226\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "ДАТЧИК INA226\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_LM75A:
-			LCD_Output_String_Center(30, "ДАТЧИК LM75A\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "ДАТЧИК LM75A\n", 0, ChUnInvers);
 			break;
 
 		default:
 			break;
 	}
 
-	LCD_Output_String_Center(52, "ПИТАНИЕ ОТКЛ.\n", 0, ChUnInvers);
+	LCD_Output_String_Center(45, "ПИТАНИЕ ОТКЛ.\n", 0, ChUnInvers);
 	LCD_Update();
 
 	//даем время прочитать сообщение
@@ -1404,7 +1404,7 @@ uint8_t PROTECTION_recover(void)
 
 			//выводим сообщение
 			LCD_Clean_Buffer_Frame();
-			LCD_Output_String(30, 25, "ВОЗВРАТ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(26, "ВОЗВРАТ\n", 0, ChUnInvers);
 			LCD_Update();
 
 			HAL_Delay(500);
@@ -3301,9 +3301,9 @@ void Splash()
 	//сброс IWDG
 	HAL_IWDG_Refresh(&hiwdg);
 	//вывод заставки
-	LCD_Output_String(1, 0, _PROGRAM_DEF, 0, ChUnInvers);
-	LCD_Output_String(36, 25, _RELEASE_DEF, 0, ChUnInvers);
-	LCD_Output_String(40, 53, _COPYRIGHT_DEF, 0, ChUnInvers);
+	LCD_Output_String_Center(0, _PROGRAM_DEF, 0, ChUnInvers);
+	LCD_Output_String_Center(25, _RELEASE_DEF, 0, ChUnInvers);
+	LCD_Output_String_Center(53, _COPYRIGHT_DEF, 0, ChUnInvers);
 	LCD_Update();
 	//длительность заставки
 	PA_Protocol_Poll();
