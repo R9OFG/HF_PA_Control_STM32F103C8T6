@@ -335,6 +335,41 @@ void LCD_Output_String(uint8_t xPos, uint8_t yPos, char *String, uint8_t setChSp
 	lastPxString_X = xPos;
 }
 
+/* ширина строки в пикселях для текущего шрифта */
+static uint16_t LCD_String_Width(const char *String, uint8_t setChSpacing)
+{
+	uint16_t width = 0;
+
+	while((*String != '\n') && (*String != '\0'))
+	{
+		uint8_t code = '?';
+
+		String += utf8_to_cp1251(String, &code);
+
+		if((code >= 32) && (code <= 255))
+		{
+			width += font_tahoma_8[(code - 0x20) * (1 + FONT_TAHOMA_8_CHAR_HEIGHT)];
+			width += setChSpacing;
+		}
+	}
+
+	return width;
+}
+
+/* функция вывода строки по центру дисплея */
+void LCD_Output_String_Center(uint8_t yPos, char *String, uint8_t setChSpacing, uint8_t Inversion)
+{
+	uint16_t width = LCD_String_Width(String, setChSpacing);
+	uint8_t xPos = 0;
+
+	if(width < LCD_Width)
+	{
+		xPos = (uint8_t)((LCD_Width - width) / 2);
+	}
+
+	LCD_Output_String(xPos, yPos, String, setChSpacing, Inversion);
+}
+
 /* геометрические примитивы */
 
 /* функция рисования линии */

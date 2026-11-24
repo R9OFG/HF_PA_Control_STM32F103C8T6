@@ -1247,51 +1247,51 @@ void PROTECTION_fault(PA_FAULT code)
 
 	//выводим причину аварии
 	LCD_Clean_Buffer_Frame();
-	LCD_Output_String(30, 12, "АВАРИЯ\n", 0, ChUnInvers);
+	LCD_Output_String_Center(12, "АВАРИЯ\n", 0, ChUnInvers);
 
 	switch(code)
 	{
 		case PA_FAULT_VOLTAGE:
-			LCD_Output_String(12, 30, "НАПРЯЖЕНИЕ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "НАПРЯЖЕНИЕ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_UVOLT:
-			LCD_Output_String(30, 30, "U НИЗКОЕ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "U НИЗКОЕ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_OVOLT:
-			LCD_Output_String(24, 30, "U ВЫСОКОЕ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "U ВЫСОКОЕ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_CURRENT:
-			LCD_Output_String(3, 30, "ТОК ПОТРЕБЛЕНИЯ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "ТОК ПОТРЕБЛЕНИЯ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_SWR:
-			LCD_Output_String(55, 30, "КСВ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "КСВ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_TEMP:
-			LCD_Output_String(30, 30, "ПЕРЕГРЕВ\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "ПЕРЕГРЕВ\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_SENSOR:
-			LCD_Output_String(15, 30, "ДАТЧИКИ I2C\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "ДАТЧИКИ I2C\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_INA226:
-			LCD_Output_String(12, 30, "ДАТЧИК INA226\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "ДАТЧИК INA226\n", 0, ChUnInvers);
 			break;
 
 		case PA_FAULT_LM75A:
-			LCD_Output_String(18, 30, "ДАТЧИК LM75A\n", 0, ChUnInvers);
+			LCD_Output_String_Center(30, "ДАТЧИК LM75A\n", 0, ChUnInvers);
 			break;
 
 		default:
 			break;
 	}
 
-	LCD_Output_String(10, 52, "ПИТАНИЕ ОТКЛ.\n", 0, ChUnInvers);
+	LCD_Output_String_Center(52, "ПИТАНИЕ ОТКЛ.\n", 0, ChUnInvers);
 	LCD_Update();
 
 	//даем время прочитать сообщение

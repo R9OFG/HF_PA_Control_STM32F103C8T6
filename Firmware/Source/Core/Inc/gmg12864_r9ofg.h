@@ -57,6 +57,7 @@ void LCD_Inversion_Pos_Buffer_Frame(uint16_t xPos_Start, uint16_t xPos_End);
 
 void LCD_Draw_Char_1_Byte(uint8_t xPos, uint8_t yPos, char Symbol, uint8_t Inversion);
 void LCD_Output_String(uint8_t xPos, uint8_t yPos, char *String, uint8_t setChSpacing, uint8_t Inversion);
+void LCD_Output_String_Center(uint8_t yPos, char *String, uint8_t setChSpacing, uint8_t Inversion);
 
 void LCD_Draw_Line(uint8_t xPos_Start, uint8_t yPos_Start, uint8_t xPos_End, uint8_t yPos_End, uint8_t pxColor);
 void LCD_Draw_Rectangle(uint8_t xPos_Start, uint8_t yPos_Start, uint8_t rectangle_Width, uint8_t rectangle_Height, uint8_t pxColor);

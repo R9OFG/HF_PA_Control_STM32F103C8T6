@@ -28,9 +28,9 @@
  * этап разработки (dev/beta/release) на дисплей не выводится.
  */
 #define PA_FW_VERSION_MAJOR		2		//старшая цифра версии прошивки
-#define PA_FW_VERSION_MINOR		0		//младшая цифра версии прошивки
+#define PA_FW_VERSION_MINOR		1		//младшая цифра версии прошивки
 #define PA_FW_VERSION_STAGE		"dev"	//этап разработки: dev / beta / release
-#define PA_FW_VERSION_STRING	"2.0"	//версия для вывода на дисплей
+#define PA_FW_VERSION_STRING	"2.1"	//версия для вывода на дисплей
 
 #define _PROGRAM_DEF		"КВ усилитель мощности\n"
 #define _RELEASE_DEF		"Версия: " PA_FW_VERSION_STRING "\n"

@@ -326,19 +326,23 @@ Windows-приложение на **WPF / .NET 8** для контроля и н
 
 ---
 
-## Прошивка (22-11-2026)
+## Прошивка (24-11-2026)
+
+Версия прошивки: **2.1**.
 
 - [Исходники прошивки](Firmware/Source/) — `Core`, `Drivers`.
-- [Готовая прошивка, HEX](Firmware/Release/hf_pa_controller_stm32f103c8t6_r9ofg_2.0.hex)
-- [Готовая прошивка, BIN](Firmware/Release/hf_pa_controller_stm32f103c8t6_r9ofg_2.0.bin)
+- [Готовая прошивка, HEX](Firmware/Release/hf_pa_controller_stm32f103c8t6_r9ofg_2.1.hex)
+- [Готовая прошивка, BIN](Firmware/Release/hf_pa_controller_stm32f103c8t6_r9ofg_2.1.bin)
 
 ---
 
-## Архив приложения (22-11-2026)
+## Архив приложения (24-11-2026)
 
 Готовое приложение — **один exe в zip-архиве**, без установки:
 
 **[Скачать HPC-R9OFG.zip](App/HPC-R9OFG.zip)**
+
+Версия приложения: **1.0.1**.
 
 - Windows 10/11, x64;
 - .NET устанавливать не нужно (self-contained);
